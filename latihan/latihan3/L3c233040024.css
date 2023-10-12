@@ -10,12 +10,13 @@ body {
     font-family: Comic sans MS;
 }
 .nama1 {
-    color: white;
-    
-    
+    color: white;  
 }
-.nama2 {
-
+.nama1:hover{
+    color: red;
+}
+.nama2:hover {
+    color: pink;
 }
 .h4 {
     text-align: right;
