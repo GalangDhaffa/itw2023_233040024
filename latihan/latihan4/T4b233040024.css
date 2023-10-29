@@ -97,15 +97,27 @@ body {
     padding: 30px;
 }
 
+.content .penulis {
+    line-height: 40px;
+    font-size: 12px;
+}
+
+.content h1{
+    margin-bottom: 10px;
+}
+
 .content h2 {
     font-size: 28px;
     font-weight: bold;
-    
 }
 
 .content p {
     margin-bottom: 20px;
     font-size: 10px;
+}
+
+.content .list{
+    font-size: 14px;
 }
 
 .footer {
@@ -129,9 +141,9 @@ body {
     src: url(font/Nexa-Heavy.ttf);
 }
 
-.paragraf {
+.content .paragraf {
     font-family: 'roboto';
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .list {
