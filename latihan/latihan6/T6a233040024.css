@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Smooch Sans', sans-serif;
+    overflow-x: hidden;
+    background-color: #c8c8c8;
+    color: black;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    background-color: #333;
+    justify-content: space-around;
+    color: #ffd000;
+    height: 50px;
+    align-items: center;
+}
+
+nav .logo {
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 3px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 25px;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: #ffd000;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+nav ul li a:hover {
+    color: yellow;
+    text-decoration: overline;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+/* container 1 */
+.container-satu {
+    width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    font-family: 'Smooch Sans', sans-serif;
+}
+
+.kolom-utama {
+    flex: 3;
+    order: 2;
+}
+
+.sidebar-satu {
+    flex: 1;
+    order: 1;
+}
+
+.sidebar-dua {
+    flex: 1;
+    order: 3;
+}
+
+/* container 2 */
+.container-dua {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.layanan {
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.layanan.satu {background-color: rgb(119, 119, 255);
+}
+.layanan.dua {background-color: rgb(103, 216, 103);
+}
+.layanan.tiga {background-color: rgb(255, 124, 124);
+}
+
+/* container 3 */
+.container-tiga {
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnail {
+    display: flex;
+    flex-wrap: wrap;
+    width: 0%;
+}
+
+.thumbnail img {
+    width: 100%;    
+}
+
+/* Hamburger Menu */
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(35deg) translate(-1px, -1px);
+    border-radius: 100px 100px -100px 100px;
+    height: 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-35deg) translate(0px, 3px);
+    border-radius: 100px 100px  100px -100px;
+    height: 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0) ;
+}
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 40cqh;
+        
+    }
+
+    .container-dua {
+        display: flex;
+        justify-content: space-between;
+        }
+    
+        .layanan {
+        width: 30%;
+        display: flex;
+        }
+    
+        .thumbnail {
+            width: 0%;
+        }
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 60%;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        z-index: 1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
