@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>flexbox</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            background-color: #727272;
-        }
+      body {
+        background-color: #727272;
+      }
 
-        .container {
-            margin: 100px auto;
-            width: 600px;
-            height: 600px;
-            background-color: rgb(97, 180, 253);
-            border: 10px solid black;
-            position: relative;
-        }
+      .container {
+        margin: 500px auto;
+        width: 600px;
+        height: 600px;
+        background-color: rgb(97, 180, 253);
+        border: 10px solid black;
+        position: relative;
+      }
 
-        .box {
-            float: left;
-            width: 150px;
-            height: 150px;
-            background-color: white;
-            position: relative;
-            top: 13rem;
-            left: 3rem;
-            margin-left: 10px;
-        }
+      .box {
+        float: left;
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        position: relative;
+        top: 13rem;
+        left: 3rem;
+        margin-left: 10px;
+      }
     </style>
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+      <div class="box" data-aos="fade-up-right" data-aos-delay="300"></div>
+      <div class="box" data-aos="fade-up" data-aos-delay="500"></div>
+      <div class="box" data-aos="fade-up-left" data-aos-delay="1000"></div>
     </div>
-</body>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
